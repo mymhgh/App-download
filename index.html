@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="bn">
 <head>
     <meta charset="UTF-8">
@@ -12,20 +12,19 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         :root {
-            --primary: #6c5ce7;
-            --primary-dark: #5245c5;
-            --secondary: #fd79a8;
-            --accent: #00b894;
-            --light: #f8f9fa;
-            --dark: #2d3436;
-            --gray: #636e72;
+            --primary: #0088cc;
+            --primary-dark: #006da3;
+            --accent: #00c853;
+            --light: #f5f5f5;
+            --dark: #333;
+            --gray: #666;
             --white: #ffffff;
-            --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
         }
         
         body {
@@ -37,7 +36,7 @@
         }
         
         .container {
-            max-width: 900px;
+            max-width: 600px;
             margin: 0 auto;
         }
         
@@ -48,135 +47,104 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(45, 52, 54, 0.9);
+            background-color: rgba(0, 0, 0, 0.8);
             z-index: 1000;
             display: flex;
             justify-content: center;
             align-items: center;
-            backdrop-filter: blur(10px);
         }
         
         .modal-content {
             background: var(--white);
-            padding: 40px;
-            border-radius: 24px;
+            padding: 30px;
+            border-radius: 15px;
             text-align: center;
-            max-width: 450px;
+            max-width: 400px;
             width: 90%;
-            box-shadow: var(--card-shadow);
-            animation: modalFadeIn 0.5s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
         
         .modal-profile {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
-            margin: 0 auto 20px;
-            border: 4px solid var(--primary);
+            margin: 0 auto 15px;
+            border: 3px solid var(--primary);
             object-fit: cover;
-            box-shadow: 0 8px 20px rgba(108, 92, 231, 0.3);
         }
         
         .modal-title {
-            font-size: 28px;
-            margin-bottom: 15px;
+            font-size: 24px;
+            margin-bottom: 10px;
             color: var(--primary);
-            font-weight: 700;
         }
         
         .modal-text {
             font-size: 18px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             color: var(--dark);
-            line-height: 1.5;
-        }
-        
-        .modal-buttons {
-            display: flex;
-            justify-content: center;
         }
         
         .modal-btn {
-            padding: 14px 35px;
+            padding: 12px 30px;
             border: none;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: 600;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
-            transition: var(--transition);
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            background: var(--primary);
             color: var(--white);
-            box-shadow: 0 6px 15px rgba(108, 92, 231, 0.4);
+            transition: var(--transition);
         }
         
         .modal-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(108, 92, 231, 0.5);
+            background: var(--primary-dark);
         }
         
         /* হেডার */
         .app-header {
             text-align: center;
-            margin-bottom: 40px;
-            animation: fadeIn 0.8s ease;
+            margin-bottom: 30px;
         }
         
         .app-header h1 {
-            font-size: 36px;
+            font-size: 28px;
             color: var(--primary);
             margin-bottom: 10px;
-            font-weight: 800;
         }
         
         .app-header p {
-            font-size: 18px;
+            font-size: 16px;
             color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
         }
         
         /* অ্যাপ সেকশন */
         .app-section {
-            margin-bottom: 50px;
-            animation: fadeIn 1s ease;
+            margin-bottom: 30px;
         }
         
         .app-card {
             background: var(--white);
-            border-radius: 20px;
-            padding: 25px;
-            margin-bottom: 25px;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
             box-shadow: var(--card-shadow);
             display: flex;
             align-items: center;
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
         }
         
         .app-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-        
-        .app-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
         
         .app-logo {
-            width: 70px;
-            height: 70px;
-            margin-right: 25px;
-            border-radius: 18px;
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 12px;
             object-fit: cover;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-            flex-shrink: 0;
         }
         
         .app-info {
@@ -184,159 +152,60 @@
         }
         
         .app-title {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
             color: var(--primary);
         }
         
         .app-version {
-            font-size: 16px;
+            font-size: 14px;
             color: var(--gray);
-            margin-bottom: 10px;
-        }
-        
-        .app-description {
-            font-size: 15px;
-            color: var(--dark);
-            opacity: 0.8;
         }
         
         .download-btn {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            background: var(--primary);
             color: var(--white);
             border: none;
-            padding: 14px 25px;
-            border-radius: 12px;
+            padding: 10px 15px;
+            border-radius: 8px;
             cursor: pointer;
-            font-weight: 600;
-            font-size: 16px;
+            font-weight: bold;
+            font-size: 14px;
             transition: var(--transition);
-            min-width: 150px;
-            box-shadow: 0 6px 15px rgba(108, 92, 231, 0.3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
+            min-width: 120px;
         }
         
-        .download-btn:hover:not(.loading) {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(108, 92, 231, 0.4);
-        }
-        
-        .download-btn:active {
-            transform: translateY(1px);
+        .download-btn:hover:not(.loading):not(.completed) {
+            background: var(--primary-dark);
         }
         
         .download-btn.loading {
-            background: linear-gradient(135deg, var(--secondary), #e84393);
+            background: #ff9800;
             cursor: not-allowed;
         }
         
         .download-btn.completed {
-            background: linear-gradient(135deg, var(--accent), #00a382);
-        }
-        
-        .progress-container {
-            width: 100%;
-            height: 8px;
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 4px;
-            margin-top: 15px;
-            overflow: hidden;
-        }
-        
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(135deg, var(--accent), #00a382);
-            border-radius: 4px;
-            width: 0%;
-            transition: width 0.5s ease;
-        }
-        
-        .progress-text {
-            font-size: 14px;
-            color: var(--gray);
-            margin-top: 8px;
-            text-align: center;
+            background: var(--accent);
         }
         
         /* লোডিং এনিমেশন */
         .loader {
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             border-top-color: var(--white);
             animation: spin 1s ease-in-out infinite;
-            margin-right: 10px;
+            display: inline-block;
+            margin-right: 5px;
         }
         
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
         
-        /* অ্যানিমেশন */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes modalFadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9) translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-        }
-        
-        /* রেস্পন্সিভ ডিজাইন */
-        @media (max-width: 768px) {
-            .app-card {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .app-logo {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-            
-            .app-info {
-                margin-bottom: 20px;
-            }
-            
-            .download-btn {
-                width: 100%;
-            }
-            
-            .app-header h1 {
-                font-size: 28px;
-            }
-            
-            .app-header p {
-                font-size: 16px;
-            }
-        }
-        
-        /* ফুটার */
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: var(--gray);
-            font-size: 15px;
-        }
-        
+        /* অ্যাড কন্টেইনার */
         .ad-container {
             position: fixed;
             top: 0;
@@ -354,7 +223,7 @@
         .ad-content {
             background: white;
             padding: 20px;
-            border-radius: 15px;
+            border-radius: 12px;
             text-align: center;
             max-width: 300px;
             width: 90%;
@@ -373,6 +242,21 @@
             cursor: pointer;
             font-weight: bold;
         }
+        
+        /* ফুটার */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        .progress-text {
+            font-size: 12px;
+            color: var(--gray);
+            margin-top: 5px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -382,9 +266,7 @@
             <img id="modal-profile-pic" class="modal-profile" src="" alt="Profile Picture">
             <h2 class="modal-title">অ্যাপ ডাউনলোডার</h2>
             <p class="modal-text" id="modal-text">এটা কি আপনি?</p>
-            <div class="modal-buttons">
-                <button class="modal-btn" onclick="confirmUser()">হ্যাঁ</button>
-            </div>
+            <button class="modal-btn" onclick="confirmUser()">হ্যাঁ</button>
         </div>
     </div>
     
@@ -394,69 +276,56 @@
         <div class="ad-content">
             <h3>বিশেষ অফার!</h3>
             <p>এই অ্যাডটি দেখানোর জন্য ধন্যবাদ</p>
-            <div id="adTimer">বন্ধ হবে: 10s</div>
         </div>
     </div>
     
     <div class="container">
         <!-- হেডার -->
         <div class="app-header">
-            <h1>প্রিমিয়াম অ্যাপস সংগ্রহ</h1>
-            <p>উচ্চ মানের অ্যাপ্লিকেশনগুলি ডাউনলোড করুন এবং আপনার অভিজ্ঞতা উন্নত করুন</p>
+            <h1>প্রিমিয়াম অ্যাপস</h1>
+            <p>উচ্চ মানের অ্যাপ্লিকেশনগুলি ডাউনলোড করুন</p>
         </div>
         
         <!-- অ্যাপ ডাউনলোড সেকশন -->
         <section class="app-section">
             <!-- অ্যাপ ১ -->
             <div class="app-card">
-                <img src="https://placehold.co/70x70/6c5ce7/white?text=PR" alt="App Logo" class="app-logo">
+                <img src="https://placehold.co/50x50/0088cc/white?text=PR" alt="App Logo" class="app-logo">
                 <div class="app-info">
                     <div class="app-title">প্রোডাক্টিভিটি স্যুট</div>
-                    <div class="app-version">ভার্সন: ১.২.০ | ১৫ MB</div>
-                    <div class="app-description">আপনার Productivity বৃদ্ধি করুন এই শক্তিশালী টুলস দিয়ে</div>
-                    <div class="progress-container">
-                        <div class="progress-bar" id="progress-app1"></div>
-                    </div>
-                    <div class="progress-text" id="progress-text-app1">ডাউনলোড প্রস্তুত</div>
+                    <div class="app-version">ভার্সন: ১.২.০</div>
                 </div>
                 <button class="download-btn" data-app="app1" id="btn-app1">
                     <span>ডাউনলোড (0/2)</span>
                 </button>
             </div>
+            <div class="progress-text" id="progress-text-app1">ডাউনলোড প্রস্তুত</div>
             
             <!-- অ্যাপ ২ -->
             <div class="app-card">
-                <img src="https://placehold.co/70x70/fd79a8/white?text=CM" alt="App Logo" class="app-logo">
+                <img src="https://placehold.co/50x50/0088cc/white?text=CM" alt="App Logo" class="app-logo">
                 <div class="app-info">
                     <div class="app-title">কমিউনিকেশন হাব</div>
-                    <div class="app-version">ভার্সন: ২.১.৫ | ২৩ MB</div>
-                    <div class="app-description">সহজে Connect হোন এবং Communicate করুন</div>
-                    <div class="progress-container">
-                        <div class="progress-bar" id="progress-app2"></div>
-                    </div>
-                    <div class="progress-text" id="progress-text-app2">ডাউনলোড প্রস্তুত</div>
+                    <div class="app-version">ভার্সন: ২.১.৫</div>
                 </div>
                 <button class="download-btn" data-app="app2" id="btn-app2">
                     <span>ডাউনলোড (0/2)</span>
                 </button>
             </div>
+            <div class="progress-text" id="progress-text-app2">ডাউনলোড প্রস্তুত</div>
             
             <!-- অ্যাপ ৩ -->
             <div class="app-card">
-                <img src="https://placehold.co/70x70/00b894/white?text=EN" alt="App Logo" class="app-logo">
+                <img src="https://placehold.co/50x50/0088cc/white?text=EN" alt="App Logo" class="app-logo">
                 <div class="app-info">
                     <div class="app-title">এন্টারটেইনমেন্ট প্যাক</div>
-                    <div class="app-version">ভার্সন: ৩.০.২ | ৪২ MB</div>
-                    <div class="app-description">বিনোদন এর জন্য সেরা অ্যাপ্লিকেশন</div>
-                    <div class="progress-container">
-                        <div class="progress-bar" id="progress-app3"></div>
-                    </div>
-                    <div class="progress-text" id="progress-text-app3">ডাউনলোড প্রস্তুত</div>
+                    <div class="app-version">ভার্সন: ৩.০.২</div>
                 </div>
                 <button class="download-btn" data-app="app3" id="btn-app3">
                     <span>ডাউনলোড (0/2)</span>
                 </button>
             </div>
+            <div class="progress-text" id="progress-text-app3">ডাউনলোড প্রস্তুত</div>
         </section>
         
         <footer>
@@ -465,7 +334,7 @@
     </div>
 
     <script>
-        // টেলিগ্রাম ইউজার ডেটা এবং অ্যাড কনফিগারেশন
+        // টেলিগ্রাম ইউজার ডেটা
         document.addEventListener('DOMContentLoaded', function() {
             // টেলিগ্রাম WebApp ইনিশিয়ালাইজেশন
             let tg = window.Telegram.WebApp;
@@ -474,7 +343,7 @@
             // ইউজার ইনফো সেট করা
             const user = tg.initDataUnsafe.user;
             if (user) {
-                document.getElementById('modal-profile-pic').src = user.photo_url || 'https://placehold.co/100x100/6c5ce7/white?text=User';
+                document.getElementById('modal-profile-pic').src = user.photo_url || 'https://placehold.co/80x80/0088cc/white?text=User';
                 
                 const modalText = document.getElementById('modal-text');
                 modalText.innerHTML = `এটা কি আপনি?<br><strong>${user.first_name}</strong>`;
@@ -506,35 +375,9 @@
             document.getElementById('confirmationModal').style.display = 'none';
         }
         
-        // অ্যাড টাইমার
-        let adTimerValue = 10;
-        let adTimerInterval;
-        
-        function startAdTimer() {
-            adTimerValue = 10;
-            const timerElement = document.getElementById('adTimer');
-            timerElement.textContent = `বন্ধ হবে: ${adTimerValue}s`;
-            
-            adTimerInterval = setInterval(() => {
-                adTimerValue--;
-                timerElement.textContent = `বন্ধ হবে: ${adTimerValue}s`;
-                
-                if (adTimerValue <= 0) {
-                    clearInterval(adTimerInterval);
-                    closeAd();
-                }
-            }, 1000);
-        }
-        
-        function closeAd() {
-            clearInterval(adTimerInterval);
-            document.getElementById('adContainer').style.display = 'none';
-        }
-        
         // অ্যাড দেখানো
         function showAd() {
             document.getElementById('adContainer').style.display = 'flex';
-            startAdTimer();
             
             // আপনার এড SDK এর ফাংশন কল করা হবে এখানে
             show_9802817({
@@ -547,6 +390,10 @@
                     everyPage: false
                 }
             });
+        }
+        
+        function closeAd() {
+            document.getElementById('adContainer').style.display = 'none';
         }
         
         // ডাউনলোড হ্যান্ডলার
@@ -562,53 +409,38 @@
             const button = document.getElementById(`btn-${appId}`);
             const progressText = document.getElementById(`progress-text-${appId}`);
             
-            // লোডিং স্টেট
-            button.classList.add('loading');
-            button.innerHTML = '<div class="loader"></div> লোডিং...';
+            // সাথে সাথে অ্যাড দেখানো
+            showAd();
             
-            // 10-15 সেকেন্ড লোডিং এবং অ্যাড দেখানো
-            setTimeout(() => {
-                state.count++;
+            state.count++;
+            
+            // বাটন টেক্সট আপডেট
+            if (state.count < state.max) {
+                button.innerHTML = `<span>ডাউনলোড (${state.count}/${state.max})</span>`;
+                progressText.textContent = `${state.count}/${state.max} এড দেখানো হয়েছে`;
+            } else {
+                button.innerHTML = '<span>ডাউনলোড হচ্ছে...</span>';
+                progressText.textContent = 'ডাউনলোড প্রস্তুত';
+                state.downloaded = true;
                 
-                // প্রোগ্রেস আপডেট
-                const progressPercent = (state.count / state.max) * 100;
-                document.getElementById(`progress-${appId}`).style.width = `${progressPercent}%`;
-                
-                if (state.count < state.max) {
-                    button.classList.remove('loading');
-                    button.innerHTML = `<span>ডাউনলোড (${state.count}/${state.max})</span>`;
-                    progressText.textContent = `${state.count}/${state.max} এড দেখানো হয়েছে`;
+                // ডাউনলোড সিমুলেট করা
+                setTimeout(() => {
+                    progressText.textContent = 'ডাউনলোড সম্পন্ন হয়েছে!';
+                    button.innerHTML = '<span>ইনস্টল করুন</span>';
+                    button.classList.add('completed');
                     
-                    // Show ad
-                    showAd();
-                } else {
-                    button.textContent = 'ডাউনলোড হচ্ছে...';
-                    progressText.textContent = 'ডাউনলোড প্রস্তুত';
-                    state.downloaded = true;
-                    
-                    // Simulate download process
-                    setTimeout(() => {
-                        progressText.textContent = 'ডাউনলোড সম্পন্ন হয়েছে!';
-                        button.textContent = 'ইনস্টল করুন';
-                        button.classList.remove('loading');
-                        button.classList.add('completed');
-                        
-                        // Change button to actual download link
-                        button.onclick = function() {
-                            window.location.href = getAppDownloadLink(appId);
-                        };
-                        
-                        // Show final ad before download
-                        showAd();
-                    }, 1500);
-                }
-            }, 12000); // 12 সেকেন্ড লোডিং
+                    // বাটনকে ডাউনলোড লিঙ্কে পরিবর্তন করা
+                    button.onclick = function() {
+                        window.location.href = getAppDownloadLink(appId);
+                    };
+                }, 1000);
+            }
         }
         
         // অ্যাপ ডাউনলোড লিঙ্ক
         function getAppDownloadLink(appId) {
             const links = {
-                app1: "app/",
+                app1: "KKH Facebook Lite Pro-app.kkh.pro-3-7.apk",
                 app2: "https://example.com/download/app2", 
                 app3: "https://example.com/download/app3"
             };
@@ -616,4 +448,4 @@
         }
     </script>
 </body>
-</html>
+                        </html>
